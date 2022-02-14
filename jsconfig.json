@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "jsx": "react",
+    "baseUrl": ".",
+    "paths": {
+      "assets/*": ["src/assets/*"],
+      "actions/*": ["src/store/actions/*"],
+      "components/*": ["src/components/*"],
+      "components": ["src/components/index"],
+      "configs/*": ["src/configs/*"],
+      "configs": ["src/configs/index"],
+      "core/*": ["src/core/*"],
+      "core": ["src/core/index"],
+      "containers/*": ["src/containers/*"],
+      "hooks/*": ["src/hooks/*"],
+      "hooks": ["src/hooks/index"],
+      "images/*": ["src/assets/*"],
+      "lang/*": ["src/lang/*"],
+      "navigations/*": ["src/navigations/*"],
+      "navigations": ["src/navigations/index"],
+      "reducers/*": ["src/store/reducers/*"],
+      "reducers": ["src/store/reducers/index"],
+      "services/*": ["src/services/*"],
+      "services": ["src/services/index"],
+      "utils/*": ["src/utils/*"],
+      "utils": ["src/utils/index"]
+    }
+  },
+  "exclude": ["node_modules"]
+}

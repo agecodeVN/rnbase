@@ -1,6 +1,10 @@
 package com.rnbase;
 
+import android.os.Bundle;
+
 import com.facebook.react.ReactActivity;
+
+import com.zoontek.rnbootsplash.RNBootSplash;
 
 public class MainActivity extends ReactActivity {
 
@@ -11,5 +15,10 @@ public class MainActivity extends ReactActivity {
   @Override
   protected String getMainComponentName() {
     return "rnbase";
+  }
+
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(null);
   }
 }
