@@ -52,7 +52,8 @@ const FWImage = ({
       } else {
         const resolveResult = RNImage.resolveAssetSource(source);
         newState.width = containerWidth;
-        newState.height = (containerWidth * resolveResult.height) / resolveResult.width;
+        newState.height =
+          (containerWidth * resolveResult.height) / resolveResult.width;
         setImageState(newState);
       }
     }

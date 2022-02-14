@@ -1,9 +1,9 @@
 import {
   CommonActions,
   DrawerActions,
-  StackActions,
+  StackActions
 } from '@react-navigation/native';
-import {createRef} from 'react';
+import { createRef } from 'react';
 
 export const navigationRef = createRef();
 export const isReadyRef = createRef();
@@ -14,7 +14,7 @@ function setContainer(container) {
 }
 
 const parentState = (state, parent) => {
-  const {index, routes} = state;
+  const { index, routes } = state;
   const currentRoute = routes[index];
   if (currentRoute.state) {
     return parentState(currentRoute.state, currentRoute.state);
@@ -36,10 +36,10 @@ function reset(name, params, key) {
         {
           name,
           params,
-          key,
-        },
-      ],
-    }),
+          key
+        }
+      ]
+    })
   );
 }
 
@@ -53,8 +53,8 @@ function navigate(name, params, key) {
       CommonActions.navigate({
         name,
         params,
-        key,
-      }),
+        key
+      })
     );
   }
 }
@@ -66,10 +66,10 @@ function navigateDeep(actions) {
         CommonActions.navigate({
           name: action.name,
           params: action.params,
-          action: prevAction,
+          action: prevAction
         }),
-      undefined,
-    ),
+      undefined
+    )
   );
 }
 
@@ -79,8 +79,8 @@ function replace(name, params, key) {
       StackActions.replace({
         name,
         params,
-        key,
-      }),
+        key
+      })
     );
   }
 }
@@ -101,15 +101,15 @@ function replaceSecond(name, params) {
             state.routes[0],
             {
               name,
-              params,
-            },
+              params
+            }
           ],
-          index: 1,
+          index: 1
         });
       } else {
         return CommonActions.navigate({
           name,
-          params,
+          params
         });
       }
     });
@@ -126,15 +126,15 @@ function replaceLast(name, params) {
             ...state.routes.slice(0, -1),
             {
               name,
-              params,
-            },
+              params
+            }
           ],
-          index: state.routes.length - 1,
+          index: state.routes.length - 1
         });
       } else {
         return CommonActions.navigate({
           name,
-          params,
+          params
         });
       }
     });
@@ -161,7 +161,7 @@ const Navigator = {
   replaceSecond,
   replaceLast,
   push,
-  toggleDrawer,
+  toggleDrawer
 };
 
 if (__DEV__) {
@@ -183,4 +183,4 @@ if (__DEV__) {
 
 export default Navigator;
 
-export {getCurrentRoute};
+export { getCurrentRoute };

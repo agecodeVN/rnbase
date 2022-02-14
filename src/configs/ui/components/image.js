@@ -1,5 +1,5 @@
-import {ThemeManager} from 'react-native-ui-lib';
-import {IMAGE_SIZES} from 'configs/constant';
+import { ThemeManager } from 'react-native-ui-lib';
+import { IMAGE_SIZES } from 'configs/constant';
 
 ThemeManager.setComponentTheme('Image', props => {
   let width = props.width || props.size;
@@ -18,6 +18,6 @@ ThemeManager.setComponentTheme('Image', props => {
   }
 
   return {
-    style: [{width, height, borderRadius: props?.radius}, props.style],
+    style: [{ width, height, borderRadius: props?.radius }, props.style]
   };
 });

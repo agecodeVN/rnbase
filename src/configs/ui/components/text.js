@@ -1,6 +1,6 @@
-import {Colors, ThemeManager, Typography} from 'react-native-ui-lib';
+import { Colors, ThemeManager, Typography } from 'react-native-ui-lib';
 // import Fonts from '../../fonts';
-import {addScaleFactor} from '../scaling';
+import { addScaleFactor } from '../scaling';
 
 ThemeManager.setComponentTheme(
   'Text',
@@ -26,7 +26,7 @@ ThemeManager.setComponentTheme(
         propsColor = Colors[key];
       }
       if (Typography[key]) {
-        propsStyle = {...propsStyle, ...Typography[key]};
+        propsStyle = { ...propsStyle, ...Typography[key] };
       }
     });
 
@@ -38,11 +38,11 @@ ThemeManager.setComponentTheme(
           fontWeight: null,
           color: color || propsColor || Colors.text,
           textDecorationLine: underline ? 'underline' : textDecorationLine,
-          lineHeight,
+          lineHeight
         },
         propsStyle,
-        customStyle,
-      ],
+        customStyle
+      ]
     };
-  },
+  }
 );

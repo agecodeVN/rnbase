@@ -22,8 +22,19 @@ const FWAlert = ({ message, onHide }) => {
   }, []); // eslint-disable-line
 
   return (
-    <View absF center backgroundColor={'rgba(0, 0, 0, 0.5)'} animated style={{ opacity }}>
-      <Image marginV-md check assetName={'check'} tintColor={Colors.white} resizeMode={'contain'} />
+    <View
+      absF
+      center
+      backgroundColor={'rgba(0, 0, 0, 0.5)'}
+      animated
+      style={{ opacity }}>
+      <Image
+        marginV-md
+        check
+        assetName={'check'}
+        tintColor={Colors.white}
+        resizeMode={'contain'}
+      />
       <Text white alert>
         {message}
       </Text>

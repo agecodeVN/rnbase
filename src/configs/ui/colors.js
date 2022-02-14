@@ -1,5 +1,5 @@
-import {Colors} from 'react-native-ui-lib';
+import { Colors } from 'react-native-ui-lib';
 
 Colors.loadColors({
-  text: '#000',
+  text: '#000'
 });

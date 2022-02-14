@@ -1,7 +1,7 @@
 import React from 'react';
-import {View, Text} from 'react-native-ui-lib';
+import { View, Text } from 'react-native-ui-lib';
 
-import {t} from 'lang';
+import { t } from 'lang';
 
 const Home = () => {
   return (

@@ -1,15 +1,15 @@
-import {useCallback} from 'react';
-import {useInfiniteQuery} from 'react-query';
+import { useCallback } from 'react';
+import { useInfiniteQuery } from 'react-query';
 import api from 'services/axios';
-import {buildURL, isEmpty} from 'utils';
-import {DEFAULT_PAGE_SIZE} from 'configs/constant';
+import { buildURL, isEmpty } from 'utils';
+import { DEFAULT_PAGE_SIZE } from 'configs/constant';
 
-const fetcher = async ({url, query} = {}) => {
-  const {page, pageSize = DEFAULT_PAGE_SIZE, ...rest} = query || {};
+const fetcher = async ({ url, query } = {}) => {
+  const { page, pageSize = DEFAULT_PAGE_SIZE, ...rest } = query || {};
   const URL = buildURL(url, {
     page: page || 1,
     pageSize,
-    ...rest,
+    ...rest
   });
   const response = await api.get(URL);
   return response.data;
@@ -29,17 +29,17 @@ const useInfinite = (
   queryKey,
   defaultQuery = {},
   options = {},
-  field,
+  field
 ) => {
   const _queryKey = Array.isArray(queryKey)
     ? queryKey
-    : [queryKey, {...defaultQuery}];
+    : [queryKey, { ...defaultQuery }];
   const result = useInfiniteQuery(
     _queryKey,
-    ({pageParam = 1}) => {
+    ({ pageParam = 1 }) => {
       return fetcher({
         url: queryURL,
-        query: {page: pageParam, ...defaultQuery},
+        query: { page: pageParam, ...defaultQuery }
       });
     },
     {
@@ -60,7 +60,7 @@ const useInfinite = (
             currentPage: data?.pages?.[data?.pages?.length - 1]?.page,
             pages: [].concat(...pagesData),
             unread: data?.pages?.[data?.pages?.length - 1]?.unread || 0,
-            [field]: data?.pages?.[data?.pages?.length - 1]?.[field],
+            [field]: data?.pages?.[data?.pages?.length - 1]?.[field]
           };
         }
         return {};
@@ -71,11 +71,11 @@ const useInfinite = (
           ? lastPage?.page + 1
           : false,
       staleTime: 5000,
-      ...options,
-    },
+      ...options
+    }
   );
 
-  const {hasNextPage, fetchNextPage} = result;
+  const { hasNextPage, fetchNextPage } = result;
 
   const loadMore = useCallback(() => {
     if (hasNextPage) {
@@ -91,7 +91,7 @@ const useInfinite = (
     currentPage: result?.data?.currentPage || 1,
     unread: result?.data?.unread,
     [field]: result?.data?.[field],
-    loadMore,
+    loadMore
   };
 };
-export {fetcher, useInfinite};
+export { fetcher, useInfinite };

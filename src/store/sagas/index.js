@@ -1,4 +1,4 @@
-import {all, call, spawn} from 'redux-saga/effects';
+import { all, call, spawn } from 'redux-saga/effects';
 
 export default function* sagas() {
   const sagas = [];
@@ -14,7 +14,7 @@ export default function* sagas() {
             console.log(e);
           }
         }
-      }),
-    ),
+      })
+    )
   );
 }

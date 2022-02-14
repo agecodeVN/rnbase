@@ -1,9 +1,9 @@
 import axios from 'axios';
-import {API_ROOT, TIMEOUT} from 'configs/constant/api';
+import { API_ROOT, TIMEOUT } from 'configs/constant/api';
 
 const instance = axios.create({
   baseURL: API_ROOT,
-  timeout: TIMEOUT,
+  timeout: TIMEOUT
 });
 
 export function setDefaultHeaders(headers) {

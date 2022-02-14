@@ -1,4 +1,4 @@
-import {Colors, ThemeManager} from 'react-native-ui-lib';
+import { Colors, ThemeManager } from 'react-native-ui-lib';
 import Fonts from '../../fonts';
 
 // Checkbox
@@ -9,8 +9,8 @@ ThemeManager.setComponentTheme('Checkbox', props => ({
   labelStyle: [props.labelStyle],
   containerStyle: [
     {
-      marginBottom: 10,
+      marginBottom: 10
     },
-    props.containerStyle,
-  ],
+    props.containerStyle
+  ]
 }));

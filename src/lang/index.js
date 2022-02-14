@@ -1,12 +1,12 @@
 import i18n from 'i18next';
-import {initReactI18next} from 'react-i18next';
+import { initReactI18next } from 'react-i18next';
 
 import en from './translations/en.json';
 import ja from './translations/ja.json';
 
 const resources = {
-  en: {translation: en},
-  ja: {translation: ja},
+  en: { translation: en },
+  ja: { translation: ja }
 };
 
 const lng = 'en';
@@ -23,8 +23,8 @@ i18n
     lng, // if you're using a language detector, do not define the lng option
 
     interpolation: {
-      escapeValue: false, // react already safes from xss => https://www.i18next.com/translation-function/interpolation#unescape
-    },
+      escapeValue: false // react already safes from xss => https://www.i18next.com/translation-function/interpolation#unescape
+    }
   });
 
 export const t = (...args) => i18n.t(...args);

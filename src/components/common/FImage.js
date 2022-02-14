@@ -10,7 +10,10 @@ const FImage = ({ source, url = '', radius, style, ...props }) => {
     if (url) {
       setSource({ uri: url });
     } else {
-      if ((typeof source === 'object' && !source?.uri) || (typeof source !== 'number' && !source)) {
+      if (
+        (typeof source === 'object' && !source?.uri) ||
+        (typeof source !== 'number' && !source)
+      ) {
         setSource(Assets.icons.no_image);
       } else {
         setSource(source);

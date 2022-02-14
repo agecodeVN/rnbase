@@ -1,2 +1,2 @@
-import {createAction} from '@reduxjs/toolkit';
-import {createRequestTypes} from 'utils/redux';
+import { createAction } from '@reduxjs/toolkit';
+import { createRequestTypes } from 'utils/redux';

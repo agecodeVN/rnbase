@@ -1,9 +1,9 @@
-import {createReducer} from '@reduxjs/toolkit';
+import { createReducer } from '@reduxjs/toolkit';
 
 const INITIAL_STATE = {
   user: {},
   token: null,
-  isLogged: false,
+  isLogged: false
 };
 
 export default createReducer(INITIAL_STATE, builder => {});

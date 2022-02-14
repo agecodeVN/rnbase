@@ -1,5 +1,10 @@
 import React from 'react';
-import { KeyboardAvoidingView, Platform, StatusBar, StyleSheet } from 'react-native';
+import {
+  KeyboardAvoidingView,
+  Platform,
+  StatusBar,
+  StyleSheet
+} from 'react-native';
 import FWLoading from './FWLoading';
 import { getStatusBarHeight } from 'react-native-status-bar-height';
 import { View } from 'react-native-ui-lib';
@@ -18,7 +23,11 @@ const Wrapper = ({
         style={styles.flexFill}
         behavior={'padding'}
         enabled={Platform.OS === 'ios' && !disableAvoidKeyboard}>
-        <StatusBar barStyle={barStyle} translucent backgroundColor={'transparent'} />
+        <StatusBar
+          barStyle={barStyle}
+          translucent
+          backgroundColor={'transparent'}
+        />
         {!!avoidStatusBar && <View style={styles.avoidStatusBar} />}
         <View flex>{children}</View>
         {!!showLoading && <FWLoading />}
