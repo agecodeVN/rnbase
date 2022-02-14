@@ -1,0 +1,26 @@
+{
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "root": ["."],
+        "alias": {
+          "assets": "./src/assets",
+          "components": "./src/components",
+          "containers": "./src/containers",
+          "configs": "./src/configs",
+          "core": "./src/core",
+          "hooks": "./src/hooks",
+          "lang": "./src/lang",
+          "navigations": "./src/navigations",
+          "services": "./src/services",
+          "utils": "./src/utils",
+          "store": "./src/store",
+          "actions": "./src/store/actions",
+          "reducers": "./src/store/reducers",
+          "sagas": "./src/store/sagas"
+        }
+      }
+    ]
+  ]
+}
