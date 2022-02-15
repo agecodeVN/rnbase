@@ -1,4 +1,4 @@
-package com.rnbase;
+package com.ProjectName;
 
 import android.os.Bundle;
 
@@ -14,7 +14,7 @@ public class MainActivity extends ReactActivity {
    */
   @Override
   protected String getMainComponentName() {
-    return "rnbase";
+    return "ProjectName";
   }
 
   @Override
