@@ -1,4 +1,4 @@
-export const API_ROOT = 'https://profme.thang.app/api/v1';
+export const API_ROOT = '';
 export const TIMEOUT = 10000;
 
 export const API = {
