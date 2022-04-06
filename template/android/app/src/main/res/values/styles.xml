@@ -7,8 +7,13 @@
     </style>
 
     <style name="BootTheme" parent="Theme.SplashScreen">
+    <!-- Full screen -->
+        <!-- <item name="android:windowBackground">@mipmap/bootsplash_logo</item> -->
+
+        <!-- icon -->
         <item name="windowSplashScreenBackground">@color/bootsplash_background</item>
         <item name="windowSplashScreenAnimatedIcon">@mipmap/bootsplash_logo</item>
         <item name="postSplashScreenTheme">@style/AppTheme</item>
     </style>
+
 </resources>

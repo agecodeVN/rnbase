@@ -19,7 +19,7 @@ import auth from 'reducers/auth';
 
 const reducers = combineReducers({ auth });
 
-const version = 22021401;
+const version = 22040601;
 
 const persistedReducer = persistReducer(
   generatePersistConfig({
