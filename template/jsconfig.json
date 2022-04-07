@@ -5,6 +5,7 @@
     "paths": {
       "assets/*": ["src/assets/*"],
       "actions/*": ["src/store/actions/*"],
+      "actions": ["src/store/actions/index"],
       "components/*": ["src/components/*"],
       "components": ["src/components/index"],
       "configs/*": ["src/configs/*"],
