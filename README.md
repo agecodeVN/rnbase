@@ -1,3 +1,3 @@
 #rntemplate
 
-npx react-native init [ProjectName] --template https://github.com/agecodeVN/ProjectName.git
+npx react-native init [ProjectName] --template https://github.com/agecodeVN/rnbase.git
