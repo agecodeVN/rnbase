@@ -16,7 +16,7 @@ const AfterInteraction = ({
   useEffect(() => {
     const timeout = setTimeout(() => {
       setFinished(true);
-    }, 1000);
+    }, 500);
 
     return () => {
       clearTimeout(timeout);
