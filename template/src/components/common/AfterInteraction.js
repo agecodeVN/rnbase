@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { InteractionManager } from 'react-native';
 import { View } from 'react-native-ui-lib';
-import { PlaceholderMedia, Placeholder, Shine, Fade } from 'rn-placeholder';
+import { UIActivityIndicator } from 'react-native-indicators';
 
 const AfterInteraction = ({
   disableAnimation,
@@ -14,18 +14,25 @@ const AfterInteraction = ({
   const [finished, setFinished] = useState(false);
 
   useEffect(() => {
+    const timeout = setTimeout(() => {
+      setFinished(true);
+    }, 1000);
+
+    return () => {
+      clearTimeout(timeout);
+    };
+  }, []);
+
+  useEffect(() => {
     InteractionManager.runAfterInteractions(() => {
       setFinished(true);
     });
   }, []);
 
   const defaultSkeleton = () => (
-    <Placeholder Animation={fade ? Fade : Shine}>
-      <PlaceholderMedia
-        isRound={false}
-        style={{ height: '100%', width: '100%' }}
-      />
-    </Placeholder>
+    <View flex center background-grey90>
+      <UIActivityIndicator size={24} color={'rgba(0, 0, 0, .3)'} />
+    </View>
   );
 
   const renderSkeleton = () =>

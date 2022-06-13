@@ -1,6 +1,8 @@
 import { StyleSheet } from 'react-native';
 import { Colors } from 'react-native-ui-lib';
 
+import { IMAGE_SIZES } from 'configs/constants';
+
 const checkBoolean = (value, trueValue = 1, falseValue = null) => {
   if (typeof value === 'boolean') {
     return value ? trueValue : falseValue;
@@ -38,8 +40,23 @@ export const commonViewProps = props => {
     radius,
     zIndex,
     shadow,
-    reverseShadow
+    reverseShadow,
+    isRound
   } = props;
+  let width = props.width || props.size;
+  let height = props.height || props.size;
+
+  for (const key in props) {
+    const size = IMAGE_SIZES[key];
+    if (size && props[key]) {
+      if (typeof size === 'object') {
+        width = size.width;
+        height = size.height;
+      } else {
+        width = height = size;
+      }
+    }
+  }
   return {
     style: StyleSheet.flatten([
       {
@@ -69,11 +86,13 @@ export const commonViewProps = props => {
         borderBottomWidth: checkBoolean(borderB || border),
         borderLeftWidth: checkBoolean(borderL || border),
         borderRightWidth: checkBoolean(borderR || border),
-        borderRadius: checkBoolean(radius),
+        borderRadius: isRound ? width / 2 : checkBoolean(radius),
         borderTopLeftRadius: checkBoolean(tlRadius),
         borderTopRightRadius: checkBoolean(trRadius),
         borderBottomLeftRadius: checkBoolean(blRadius),
-        borderBottomRightRadius: checkBoolean(brRadius)
+        borderBottomRightRadius: checkBoolean(brRadius),
+        width,
+        height
       },
       shadow && styles.shadow,
       reverseShadow && styles.reverseShadow
