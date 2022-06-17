@@ -10,6 +10,7 @@ export const SCALE_FACTOR =
   }[PixelRatio.get()] || 1;
 
 export const addScaleFactor = (object, keys) => {
+  return object;
   if (typeof object === 'object') {
     const result = { ...object };
     Object.keys(object).forEach(key => {

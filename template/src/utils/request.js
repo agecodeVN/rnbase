@@ -1,7 +1,7 @@
 import { stringify } from 'query-string';
 import { Platform } from 'react-native';
 
-import { API_ROOT } from 'configs/constant';
+import { API_ROOT } from 'configs/constants';
 import api from 'services/axios';
 import RNFetchBlob from 'rn-fetch-blob';
 
