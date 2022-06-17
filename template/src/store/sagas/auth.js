@@ -1,5 +1,5 @@
 import { takeEvery, put } from 'redux-saga/effects';
-import { API } from 'configs/constant';
+import { API } from 'configs/constants';
 import { SIGNIN, UPDATE_ME, GET_ME } from 'actions';
 import { request, fetchBlob } from 'utils/request';
 

@@ -2,7 +2,7 @@ import { useCallback } from 'react';
 import { useInfiniteQuery } from 'react-query';
 import api from 'services/axios';
 import { buildURL, isEmpty } from 'utils';
-import { DEFAULT_PAGE_SIZE, STALE_TIME } from 'configs/constant';
+import { DEFAULT_PAGE_SIZE, STALE_TIME } from 'configs/constants';
 
 const fetcher = async ({ url, query } = {}) => {
   const { page, pageSize = DEFAULT_PAGE_SIZE, ...rest } = query || {};

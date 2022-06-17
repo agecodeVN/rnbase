@@ -4,7 +4,7 @@ import { Colors, View, Spacings, Text, Image } from 'react-native-ui-lib';
 
 import { t } from 'lang';
 // import Fonts from 'configs/fonts';
-import { IMAGE_SIZES } from 'configs/constant';
+import { IMAGE_SIZES } from 'configs/constants';
 
 const Input = ({
   bgColor = Colors.subLightBlue,

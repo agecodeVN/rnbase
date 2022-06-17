@@ -9,7 +9,7 @@ const resources = {
   ja: { translation: ja }
 };
 
-const lng = 'en';
+const lng = 'ja';
 
 i18n
 

@@ -10,6 +10,8 @@ import { store, persistor } from './src/store/reduxProvider';
 import Splash from 'containers/splash';
 import Root from 'navigations/Root';
 import queryClient from 'services/queryClient';
+import GlobalLoading from 'components/global/Loading';
+import { appLoading } from 'components/global';
 
 const App = () => {
   const onBeforeLift = () => {
@@ -24,6 +26,7 @@ const App = () => {
           persistor={persistor}
           onBeforeLift={onBeforeLift}>
           <Root />
+          <GlobalLoading ref={appLoading} />
         </PersistGate>
       </QueryClientProvider>
     </Provider>

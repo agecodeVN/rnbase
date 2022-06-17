@@ -53,13 +53,11 @@ const FList = ({
       return renderFooter;
     }
 
-    return (
-      hasNextPage && (
-        <View paddingT-md>
-          <UIActivityIndicator color={Colors.primary} />
-        </View>
-      )
-    );
+    return hasNextPage ? (
+      <View paddingT-md>
+        <UIActivityIndicator color={Colors.primary} />
+      </View>
+    ) : null;
   };
 
   return (
