@@ -7,14 +7,11 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint .",
-    "postinstall": "npx patch-package",
-    "aab": "cd android && ./gradlew bundleRelease",
-    "apk": "cd android && ./gradlew assembleRelease"
+    "lint": "eslint ."
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "^1.17.6",
-    "@react-native-picker/picker": "^2.4.1",
+    "@react-native-picker/picker": "^2.4.2",
     "@react-navigation/bottom-tabs": "^6.3.1",
     "@react-navigation/native": "^6.0.10",
     "@react-navigation/native-stack": "^6.6.2",
@@ -23,11 +20,10 @@
     "formik": "^2.2.9",
     "i18next": "^21.8.10",
     "query-string": "^7.1.1",
-    "react": "17.0.2",
+    "react": "18.0.0",
     "react-fast-compare": "^3.2.0",
     "react-i18next": "^11.17.2",
-    "react-native": "0.68.0",
-    "react-native-bootsplash": "^4.1.5",
+    "react-native": "0.69.0",
     "react-native-date-picker": "^4.2.2",
     "react-native-fast-image": "^8.5.11",
     "react-native-gesture-handler": "^2.4.2",
@@ -39,7 +35,7 @@
     "react-native-screens": "^3.13.1",
     "react-native-status-bar-height": "^2.6.0",
     "react-native-tab-view": "^3.1.1",
-    "react-native-ui-lib": "^6.17.1",
+    "react-native-ui-lib": "^6.17.2",
     "react-query": "^3.39.1",
     "react-redux": "^8.0.2",
     "redux-persist": "^6.0.0",
@@ -56,9 +52,8 @@
     "babel-plugin-module-resolver": "^4.1.0",
     "eslint": "^7.32.0",
     "jest": "^26.6.3",
-    "metro-react-native-babel-preset": "^0.67.0",
-    "patch-package": "^6.4.7",
-    "react-test-renderer": "17.0.2"
+    "metro-react-native-babel-preset": "^0.70.3",
+    "react-test-renderer": "18.0.0"
   },
   "jest": {
     "preset": "react-native"
