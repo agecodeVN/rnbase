@@ -30,7 +30,7 @@
     "react-native-indicators": "^0.17.0",
     "react-native-modal": "^13.0.1",
     "react-native-pager-view": "^5.4.24",
-    "react-native-reanimated": "^2.8.0",
+    "react-native-reanimated": "^3.0.0-rc.0",
     "react-native-safe-area-context": "^4.3.1",
     "react-native-screens": "^3.13.1",
     "react-native-status-bar-height": "^2.6.0",
