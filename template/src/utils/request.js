@@ -3,7 +3,7 @@ import { Platform } from 'react-native';
 
 import { API_ROOT } from 'configs/constants';
 import api from 'services/axios';
-import RNFetchBlob from 'rn-fetch-blob';
+import RNFetchBlob from 'react-native-blob-util';
 
 export function buildURL(url, query) {
   let _url = url;

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { StyleSheet, NativeModules } from 'react-native';
 import { View, Text } from 'react-native-ui-lib';
 import { Pressable } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -22,6 +23,7 @@ const App = () => {
   };
 
   useEffect(() => {
+    console.log(NativeModules);
     loadPreviousLang();
   }, []);
 
@@ -42,7 +44,7 @@ const App = () => {
 
   const renderLanguageSwitch = () => {
     return (
-      <View absR border customStyle={{ bottom: 120 }}>
+      <View absR border customStyle={styles.language}>
         {LANGUAGES.map(item => {
           const isSelected = item === lang;
           return (
@@ -70,5 +72,11 @@ const App = () => {
     )
   );
 };
+
+const styles = StyleSheet.create({
+  language: {
+    bottom: 120
+  }
+});
 
 export default App;
